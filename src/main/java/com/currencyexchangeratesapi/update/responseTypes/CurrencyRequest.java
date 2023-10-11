@@ -1,4 +1,4 @@
-package com.currencyexchangeratesapi.dataUpdate;
+package com.currencyexchangeratesapi.update.responseTypes;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
