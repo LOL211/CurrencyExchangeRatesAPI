@@ -1,7 +1,7 @@
 package com.currencyexchangeratesapi.controller;
 
 
-import com.currencyexchangeratesapi.dataUpdate.Currencies;
+import com.currencyexchangeratesapi.update.Currencies;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,8 +27,14 @@ public class ExchangeRates {
                     .status(400)
                     .body(e.getMessage());
         }
+    }
 
-
+    @GetMapping("/currencylist")
+    public ResponseEntity<String> getCurrencyList()
+    {
+        return ResponseEntity
+                .status(200)
+                .body(Currencies.getSymbols());
     }
 
 
